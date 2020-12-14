@@ -1,0 +1,12 @@
+{
+  "name": "csharpserver",
+  "version": "1.0.0",
+  "description": "C# Solution for Game server",
+  "main": "index.js",
+  "scripts": {
+    "start": "dotnet run --project CSharpServer.App",
+    "lib": "echo Testing..."
+  },
+  "author": "sorabh",
+  "license": "ISC"
+}

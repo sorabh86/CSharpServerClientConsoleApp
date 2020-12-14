@@ -1,0 +1,44 @@
+{
+   // Use IntelliSense to find out which attributes exist for C# debugging
+   // Use hover for the description of the existing attributes
+   // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+   "version": "0.2.0",
+   "configurations": [
+        {
+            "name": "Client",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildclient",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/CSharpClient/bin/Debug/net5.0/CSharpClient.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/CSharpClient",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "externalConsole": true,
+            "console": "externalTerminal",
+            // "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Server",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildserver",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/CSharpServer/bin/Debug/net5.0/CSharpServer.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/CSharpServer",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "externalConsole": true,
+            "console": "externalTerminal",
+            // "console": "internalConsole",
+            "stopAtEntry": false
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Server/Client",
+            "configurations": ["Server", "Client"]
+        }
+    ]
+}
